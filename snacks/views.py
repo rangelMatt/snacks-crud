@@ -14,14 +14,14 @@ class SnackDetailView(DetailView):
 class SnackCreateView(CreateView):
   template_name = "snack_create.html"
   model = Snack
-  fields = ["title","purchaser"]
+  fields = ["title","purchaser","description"]
   
 class SnackUpdateView(UpdateView):
   template_name = "snack_update.html"
   model = Snack
-  fields = ["title","purchaser"]
+  fields = ["title","purchaser","description"]
 
 class SnackDeleteView(DeleteView):
   template_name = "snack_delete.html"
   model = Snack
-  # success fields = ["title","purchaser"]
+  success_url = reverse_lazy("snack_list")

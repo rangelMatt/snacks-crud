@@ -1,11 +1,11 @@
 {% block content %}
 <a href="{% url 'snack_list' %}">Home</a>
-<div>
-<h2>{{ snack.name }}</h2>
-<p>Drescription: {{ snack.description }}</p>
-<p>{{ snack.purchaser }}</p>
+
+<h2>Details about {{ snack.title }}</h2>
+<p>Description: {{ snack.description }}</p>
+<p>Purchaser: {{ snack.purchaser }}</p>
 
 <a href="{% url 'snack_update' snack.pk %}">+ Update Snack</a>
 <a href="{% url 'snack_delete' snack.pk %}">- Delete Snack</a>
-</div>
+
 {% endblock content %}
